@@ -1,6 +1,6 @@
 // Select color input
 // Select size input
-const color = document.getElementById("colorPicker");
+const color = document.getElementById("colorPick");
 const tableElement = document.getElementById("pixelCanvas");
 const inputHeight = document.getElementById("inputHeight");
 const inputWidth = document.getElementById("inputWidth");
@@ -20,6 +20,8 @@ function makeGrid(inputHeight, inputWidth) {
     let cell = row.insertCell(j);
     cell.addEventListener("click", function(event) {
       cell.style.backgroundColor = color.value;
+      cell.classList.add("colorful");
+    let coloredCell = document.querySelectorAll('.colorful');
      });
    }
  }
